@@ -3,7 +3,7 @@
  let hours=["6AM " ,'7AM ','8AM','9AM','10AM','11AM','12PM ','1PM ','2PM ','3PM ','4PM ','5PM ','6PM ','7PM ','8PM'];
 //seattle
 let seattleBranch = {
-    location: 'Seattle',
+    location: 'Seattle ',
     min: 23,
     max: 65,
     averageSales: 6.3,
@@ -34,11 +34,11 @@ let seattleBranch = {
        container.appendChild(listFirst);
        for (let i=0;i<hours.length;i++){
         let Itemlist = document.createElement('li');
-        Itemlist.textContent  =hours[i]+': '+seattleBranch.hourCookies[i]+'🍪 cookies';
+        Itemlist.textContent  =hours[i]+': '+seattleBranch.hourCookies[i]+' cookies 🍪';
         listFirst.appendChild(Itemlist);
        }
        let Itemlist = document.createElement('li');
-        Itemlist.textContent  ='The total sales are listed above for per hour for per hour: '+seattleBranch.dailySales+' 🍪 cookies';
+        Itemlist.textContent  ='The total sales are listed above for per hour for per hour: '+seattleBranch.dailySales+'  cookies 🍪';
         listFirst.appendChild(Itemlist);
 
    }
@@ -88,11 +88,11 @@ let CookiesT = {
        container.appendChild(listFirst);
        for (let i=0;i<hours.length;i++){
         let Itemlist = document.createElement('li');
-        Itemlist.textContent  =hours[i]+': '+CookiesT.hourCookies[i]+'🍪 cookies';
+        Itemlist.textContent  =hours[i]+': '+CookiesT.hourCookies[i]+' cookies🍪';
         listFirst.appendChild(Itemlist);
        }
        let Itemlist = document.createElement('li');
-        Itemlist.textContent  ='The total sales are listed above for per hour for per hour for per hour: '+CookiesT.dailySales+'🍪 cookies';
+        Itemlist.textContent  ='The total sales are listed above for per hour for per hour for per hour: '+CookiesT.dailySales+' cookies 🍪';
         listFirst.appendChild(Itemlist);
 
 
@@ -137,11 +137,11 @@ CookiesT.render();
        container.appendChild(listFirst);
        for (let i=0;i<hours.length;i++){
         let Itemlist = document.createElement('li');
-        Itemlist.textContent  =hours[i]+': '+CookiesDubai.hourCookies[i]+'🍪 cookies';
+        Itemlist.textContent  =hours[i]+': '+CookiesDubai.hourCookies[i]+' cookies 🍪 ';
         listFirst.appendChild(Itemlist);
        }
        let Itemlist = document.createElement('li');
-        Itemlist.textContent  ='The total sales are listed above for per hour for per hour for per hour: '+CookiesDubai.dailySales+'🍪 cookies';
+        Itemlist.textContent  ='The total sales are listed above for per hour for per hour for per hour: '+CookiesDubai.dailySales+' cookies 🍪';
         listFirst.appendChild(Itemlist);
 
 
@@ -184,11 +184,11 @@ CookiesDubai.render();
        container.appendChild(listFirst);
        for (let i=0;i<hours.length;i++){
         let Itemlist = document.createElement('li');
-        Itemlist.textContent  =hours[i]+': '+CookiesP.hourCookies[i]+'🍪 cookies';
+        Itemlist.textContent  =hours[i]+': '+CookiesP.hourCookies[i]+' cookies 🍪';
         listFirst.appendChild(Itemlist);
        }
        let Itemlist = document.createElement('li');
-        Itemlist.textContent  ='The total sales are listed above for per hour for per hour: '+CookiesP.dailySales+'🍪 cookies';
+        Itemlist.textContent  ='The total sales are listed above for per hour for per hour: '+CookiesP.dailySales+' cookies 🍪';
         listFirst.appendChild(Itemlist);
 
 
@@ -231,11 +231,11 @@ CookiesP.render();
        container.appendChild(listFirst);
        for (let i=0;i<hours.length;i++){
         let Itemlist = document.createElement('li');
-        Itemlist.textContent  =hours[i]+': '+CookiesP.hourCookies[i]+'🍪 cookies';
+        Itemlist.textContent  =hours[i]+': '+CookiesP.hourCookies[i]+' cookies 🍪';
         listFirst.appendChild(Itemlist);
        }
        let Itemlist = document.createElement('li');
-        Itemlist.textContent  ='The total sales are listed above for per hour for per hour: '+CookiesP.dailySales+' 🍪cookies';
+        Itemlist.textContent  ='The total sales are listed above for per hour for per hour: '+CookiesP.dailySales+' cookies 🍪';
         listFirst.appendChild(Itemlist);
 
 
