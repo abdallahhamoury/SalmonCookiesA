@@ -30,6 +30,8 @@ BranchesV.prototype.render = function () {
     
 
 
+
+
 }
 let seattleBranch = new BranchesV('seattle', 23, 65, 6.3,)
 let TokyoBranch = new BranchesV('Tokyo', 3, 24, 1.2,)
