@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(27, 27, 26);
+    border: double
+    margin : 0;
+}
+
+#Branch-Name{
+    background-color: cadetblue;
+    border: 4px dotted rgb(195, 195, 207)
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    
+}
+
