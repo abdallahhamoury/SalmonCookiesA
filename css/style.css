@@ -5,7 +5,10 @@ body{
 }
 
 
-
+table,th,td{
+    border: 1px solid black ;
+    padding: 6px;
+}
 
 img{
     display: block;
@@ -14,12 +17,24 @@ img{
     
 }
 div th  {
+    padding-right: 14px
     text-align: center;
     border: 5px solid rgb(185, 185, 185);
-    padding-right: 1%;
+    
 }
 
+th td{
+
+    padding: 200px;
+}
 div{
+    margin-top: 7%;
+    margin-left: 13%;
     text-align: center;
-margin-right: 1%;
+
+}
+
+fieldset{
+    margin-right: 205px;
+    padding: 7px;
 }
