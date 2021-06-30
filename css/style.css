@@ -1,13 +1,11 @@
 body{
-    background-color: rgb(27, 27, 26);
+    background-color: rgb(235, 235, 217);
     border: double
     margin : 0;
 }
 
-#Branch-Name{
-    background-color: cadetblue;
-    border: 4px dotted rgb(195, 195, 207)
-}
+
+
 
 img{
     display: block;
@@ -15,4 +13,13 @@ img{
     margin-right: auto
     
 }
+div th  {
+    text-align: center;
+    border: 5px solid rgb(185, 185, 185);
+    padding-right: 1%;
+}
 
+div{
+    text-align: center;
+margin-right: 1%;
+}
