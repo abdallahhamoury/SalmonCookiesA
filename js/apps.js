@@ -38,6 +38,14 @@ Shop.prototype.calAvgCookiesPerH = function () {
     }
     // console.log(this.avgCookiesPerH)
 }
+
+let seattle = new Shop('Seattle', 23, 65, 6.3);
+let tokyo = new Shop('Tokyo', 3, 24, 1.2);
+let dubai = new Shop('Dubai', 11, 38, 3.7);
+let paris = new Shop('Paris', 20, 38, 2.3);
+let lima = new Shop('Lima', 2, 16, 4.6);
+
+
 Shop.prototype.render = function () {
     this.calAvgCookiesPerH();
     let trEl = document.createElement('tr');
@@ -53,6 +61,13 @@ Shop.prototype.render = function () {
     tdTotalEl.textContent = this.total;
     trEl.appendChild(tdTotalEl);
     tableEl.appendChild(trEl);
+}
+
+// createTableHeader();
+for (let i = 0; i < shops.length; i++) {
+    // shops[i].calcRandcustPerH();
+    // shops[i].calAvgCookiesPerH();
+    shops[i].render();
 }
 
 function createTableHeader() {
@@ -71,16 +86,22 @@ function createTableHeader() {
     tableEl.appendChild(trEl);
 }
 
+// for (let i = 0; i < shops.length; i++) {
+//     // shops[i].calcRandcustPerH();
+//     // shops[i].calAvgCookiesPerH();
+//     shops[i].render();
+// }
+
 function createFooter() {
     let tfootEl = document.createElement('tfoot');
-    let tdEl = document.createElement('td');
+    let tdEl = document.createElement('th');
     tdEl.textContent = 'Totals';
     tfootEl.appendChild(tdEl);
     tableEl.appendChild(tfootEl);
     let megaTotal = 0;
 
     for (let h = 0; h < hours.length; h++) {
-        let tdEl = document.createElement('td');
+        let tdEl = document.createElement('th');
         let sum = 0;
 
 
@@ -91,13 +112,25 @@ function createFooter() {
         tdEl.textContent = sum;
         tfootEl.appendChild(tdEl);
     }
-    let totalTdEl = document.createElement('td');
+    let totalTdEl = document.createElement('th');
     totalTdEl.textContent = megaTotal;
     tfootEl.appendChild(totalTdEl);
 
 }
+createFooter();
 
 
+
+
+let myform = document.getElementById('myform')
+myform.addEventListener('submit',addstore);
+
+
+// let seattle = new Shop('Seattle', 23, 65, 6.3);
+// let tokyo = new Shop('Tokyo', 3, 24, 1.2);
+// let dubai = new Shop('Dubai', 11, 38, 3.7);
+// let paris = new Shop('Paris', 20, 38, 2.3);
+// let lima = new Shop('Lima', 2, 16, 4.6);
 
 function addstore(event) {
     event.preventDefault();
@@ -108,31 +141,19 @@ function addstore(event) {
     let averegsales = event.target.averegsales.value;
 
     let newstore = new Shop(Branch, maxOrder, minOrder, averegsales)
-
-
-    newstore.render()
-    createFooter
-
-
-
-
-
-
+    newstore.calcRandcustPerH(maxOrder, minOrder);
+    newstore.calAvgCookiesPerH(averegsales);
+    newstore.render();
+    tableEl.deleteTFoot();
+    createFooter();
 }
-let myform = document.getElementById('myform')
-myform.addEventListener('submit',addstore);
 
 
-let seattle = new Shop('Seattle', 23, 65, 6.3);
-let tokyo = new Shop('Tokyo', 3, 24, 1.2);
-let dubai = new Shop('Dubai', 11, 38, 3.7);
-let paris = new Shop('Paris', 20, 38, 2.3);
-let lima = new Shop('Lima', 2, 16, 4.6);
 
-createTableHeader();
-for (let i = 0; i < shops.length; i++) {
-    // shops[i].calcRandcustPerH();
-    // shops[i].calAvgCookiesPerH();
-    shops[i].render();
-}
-createFooter();
+// createTableHeader();
+// for (let i = 0; i < shops.length; i++) {
+//     // shops[i].calcRandcustPerH();
+//     // shops[i].calAvgCookiesPerH();
+//     shops[i].render();
+// }
+// createFooter();
